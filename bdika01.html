@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בדיקת הקדשה לאריאל</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+    <script>
+        function checkMessage() {
+            const input = document.getElementById("message").value;
+            if (input === "יש לך מה להגיד לי מסתיו?" || input === "יש לך מה להגיד לי מסתיו? 345543") {
+                document.getElementById("result").innerHTML = `<b>לאריאל היקר,</b><br>
+                אחי, אם היו עושים מחקר על אנשים שהם 100% נדירים, אתה היית מקרה מבחן. בנוי מחומרים שאפילו המדע עוד לא גילה, 
+                עם לב בגודל של יבשת ואופי שמפיל מערכות הפעלה. תמיד שם, תמיד בגובה העיניים, ותמיד יודע להפוך כל רגע רגיל למשהו שאי אפשר לשכוח.<br>
+                בקיצור, לא סתם חבר – אגדה חיה. זכיתי בך, ותמיד מעריך אותך!`;
+            } else {
+                document.getElementById("result").innerText = "ההודעה לא מזוהה.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>בדיקת הקדשה לאריאל</h2>
+    <input type="text" id="message" placeholder="הקלד את ההודעה כאן">
+    <button onclick="checkMessage()">בדוק</button>
+    <p id="result"></p>
+</body>
+</html>
